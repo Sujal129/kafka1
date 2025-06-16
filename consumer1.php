@@ -18,7 +18,7 @@ $conf->set('bootstrap.servers', 'localhost:9092');
 $consumer = new RdKafka\KafkaConsumer($conf);
 $consumer->subscribe(['kafka_main']);
 
-echo "🟢 Consumer 1 started and listening on 'kafka_main' topic...\n";
+echo "🟢 Consumer 1 started and and listening on 'kafka_main' topic...\n";
 
 while (true) {
     $message = $consumer->consume(1000); // Wait max 1 second
